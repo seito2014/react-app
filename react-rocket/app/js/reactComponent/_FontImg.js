@@ -8,7 +8,7 @@ class FontImg extends React.Component {
 
     render() {
         return (
-            <img src={data[0].question} width="320" height="60" alt=""/>
+            <img src={data[0].QUESTION} width="320" height="60" alt=""/>
         );
     }
 }

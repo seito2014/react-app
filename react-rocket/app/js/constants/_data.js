@@ -1,15 +1,15 @@
 module.exports = [
     {
-        question: "images/img-calibri.png",
-        select: ["Helvetica", "Calibri", "Yu Gothic", "Arial"],
-        answer: "Calibri"
+        QUESTION: "images/img-calibri.png",
+        SELECT: ["Helvetica", "Calibri", "Yu Gothic", "Arial"],
+        ANSWER: "Calibri"
     }, {
-        question: "images/img-helvetica.png",
-        select: ["Montserrat", "Helvetica", "Roboto", "Noto fonts"],
-        answer: "Helvetica"
+        QUESTION: "images/img-helvetica.png",
+        SELECT: ["Montserrat", "Helvetica", "Roboto", "Noto fonts"],
+        ANSWER: "Helvetica"
     }, {
-        question: "images/img-times-new-roman.png",
-        select: ["Times new roman", "Meiryo", "Lato", "Raleway"],
-        answer: "Times new roman"
+        QUESTION: "images/img-times-new-roman.png",
+        SELECT: ["Times new roman", "Meiryo", "Lato", "Raleway"],
+        ANSWER: "Times new roman"
     }
 ];

@@ -10,7 +10,7 @@ class Button extends React.Component {
     handleClick(){
         let userAnswer = this.props.text;
 
-        if(userAnswer === data[0].answer){
+        if(userAnswer === data[0].ANSWER){
             answerList[0] = true;
         } else {
             answerList[0] = false;
