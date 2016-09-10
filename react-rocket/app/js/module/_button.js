@@ -1,4 +1,6 @@
 import React from 'react';
+import data from './_data.js';
+import answerList from './_answer-list.js';
 
 class Button extends React.Component {
     constructor(props) {
@@ -6,7 +8,15 @@ class Button extends React.Component {
     }
 
     handleClick(){
-        console.log(this.props.text);
+        let userAnswer = this.props.text;
+
+        if(userAnswer === data[0].answer){
+            answerList[0] = true;
+        } else {
+            answerList[0] = false;
+        }
+        console.log(answerList);
+        // console.log(data[0].answer);
         // window.alert(this);
         // window.alert(e.currentTarget);
         // show($(e.currentTarget));

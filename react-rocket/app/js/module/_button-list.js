@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from './_button';
 import data from './_data.js';
-// console.log(data[0].question);
 
 class ButtonList extends React.Component {
     constructor(props) {
