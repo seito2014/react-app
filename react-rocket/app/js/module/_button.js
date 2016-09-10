@@ -1,6 +1,6 @@
 import React from 'react';
 import data from './_data.js';
-import answerList from './_answer-list.js';
+import answerList from './_answerList.js';
 
 class Button extends React.Component {
     constructor(props) {
@@ -15,6 +15,8 @@ class Button extends React.Component {
         } else {
             answerList[0] = false;
         }
+
+        console.log(answerList);
     }
 
     render() {
