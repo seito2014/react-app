@@ -11,7 +11,7 @@ class Button extends React.Component {
 
     render() {
         return (
-            <button className={this.props.className} onClick={this.onClick}>Copy</button>
+            <button className={this.props.className} onClick={this.onClick}>{this.props.text}</button>
         );
     }
 }
