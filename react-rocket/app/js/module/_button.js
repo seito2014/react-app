@@ -5,13 +5,16 @@ class Button extends React.Component {
         super(props);
     }
 
-    onClick(){
-        window.alert('hi');
+    handleClick(){
+        console.log(this.props.text);
+        // window.alert(this);
+        // window.alert(e.currentTarget);
+        // show($(e.currentTarget));
     }
 
     render() {
         return (
-            <button className={this.props.className} onClick={this.onClick}>{this.props.text}</button>
+            <button className={this.props.className} onClick={this.handleClick.bind(this)}>{this.props.text}</button>
         );
     }
 }
