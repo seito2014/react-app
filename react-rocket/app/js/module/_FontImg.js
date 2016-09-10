@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './_data.js';
+import data from '../constants/_data.js';
 
 class FontImg extends React.Component {
     constructor(props) {
