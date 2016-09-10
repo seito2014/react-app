@@ -1,0 +1,37 @@
+<% include const/_const %>
+<%
+var id = "index";
+var title = "";
+var description = "sample text,sample text";
+var keywords = "word1,word2,word3";
+var type = "blog";
+%>
+<% include metadata/_head %>
+
+<!--start l-contents-->
+
+<main class="l-quiz l-container">
+
+    <div class="l-quiz-question">
+        <dl class="question">
+            <dt>Q1.このフォントは？</dt>
+            <dd>
+                <img src="http://placekitten.com/320/80" height="80" width="320" alt="">
+            </dd>
+        </dl>
+    </div>
+
+    <div class="l-quiz-ansewr">
+        <div class="answer l-grid l-grid-col2">
+            <ul class="answer-list l-grid-inner">
+                <% for(var iWin = 0; iWin < winArray.length; iWin++) { %>
+                <li class="l-grid-item js-button">
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</main>
+<!--end l-contents-->
+
+<% include metadata/_script %>
