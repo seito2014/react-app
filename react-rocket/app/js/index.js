@@ -13,6 +13,7 @@ fit();
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ButtonList from './module/_button-list';
+import FontImg from './module/_FontImg';
 
-let button = 'js-button';
 ReactDOM.render(<ButtonList />, document.getElementById('js-buttons'));
+ReactDOM.render(<FontImg />, document.getElementById('js-img'));

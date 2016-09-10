@@ -15,11 +15,6 @@ class Button extends React.Component {
         } else {
             answerList[0] = false;
         }
-        console.log(answerList);
-        // console.log(data[0].answer);
-        // window.alert(this);
-        // window.alert(e.currentTarget);
-        // show($(e.currentTarget));
     }
 
     render() {
