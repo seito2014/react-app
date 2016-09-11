@@ -1,15 +1,22 @@
 import React from 'react';
-import data from '../constants/_data.js';
-import answerList from '../constants/_answerList.js';
+import data from '../constants/_Data.js';
+import answerList from '../store/_AnswerTable.js';
+import Action from '../action/_Action.js';
 
 class Button extends React.Component {
     constructor(props) {
         super(props);
+        this.index = props.index;
+        this._countUp = props.countUp;
+        // console.log(this._countUp);
     }
 
     handleClick(){
-        console.log(this);
+        // console.log(this);
         this.storeAnswer();
+        // this.countUp();
+        // console.log(this.state);
+        this._countUp();
     }
 
     storeAnswer(){
@@ -20,7 +27,6 @@ class Button extends React.Component {
         } else {
             answerList[0] = false;
         }
-        console.log(answerList);
     }
 
     render() {
