@@ -8,6 +8,11 @@ class Button extends React.Component {
     }
 
     handleClick(){
+        console.log(this);
+        this.storeAnswer();
+    }
+
+    storeAnswer(){
         let userAnswer = this.props.text;
 
         if(userAnswer === data[0].ANSWER){
@@ -15,7 +20,6 @@ class Button extends React.Component {
         } else {
             answerList[0] = false;
         }
-
         console.log(answerList);
     }
 
