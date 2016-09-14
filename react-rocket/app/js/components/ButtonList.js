@@ -62,7 +62,7 @@ class ButtonList extends Component {
         const buttonArray = (counter) => {
             let array = [];
 
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < Data.viewData.length + 1; i++) {
                 array.push(
                     <li className="l-grid-item js-button">
                         <button className="button" onClick={onButtonClick}>
