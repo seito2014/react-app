@@ -58,6 +58,6 @@ function buildScript(file, watch) {
 gulp.task('browserify', function() {
 
   // Only run watchify if NOT production
-  return buildScript('index.js', !global.isProd);
+  return buildScript('main.js', !global.isProd);
 
 });
