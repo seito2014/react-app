@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
-import Button from './components/Button'
+import ButtonList from './components/ButtonList'
 import reducer from './reducers'
 
 const store = createStore(reducer);
@@ -9,9 +9,9 @@ const store = createStore(reducer);
 const rootEl = document.getElementById('js-quiz');
 
 const render = () => ReactDOM.render(
-  <Button
+  <ButtonList
     value={store.getState()}
-    onClick={() => store.dispatch({ type: 'INCREMENT' })}
+    onButtonClick={() => store.dispatch({ type: 'INCREMENT' })}
   />,
   rootEl
 );
