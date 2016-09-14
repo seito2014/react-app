@@ -65,7 +65,7 @@ class ButtonList extends Component {
 
             for (let i = 0; i < Data.viewData.length + 1; i++) {
                 array.push(
-                    <li className="l-grid-item js-button">
+                    <li key={i} className="l-grid-item js-button">
                         <Button
                             text={Data.viewData[counter].SELECT[i]}
                             onClick={onButtonClick}
