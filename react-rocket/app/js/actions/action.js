@@ -1,6 +1,6 @@
-export const addAnswering = (answer) => {
+export const answer = (answer) => {
     return {
-        type: 'ADD_ANSWERING',
+        type: 'ANSWER',
         answer
     }
 };
