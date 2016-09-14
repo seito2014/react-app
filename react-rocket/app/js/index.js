@@ -13,8 +13,8 @@ fit();
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import ButtonList from './reactComponent/_ButtonList';
-import Quiz from './react/view/_QuizApp';
+import QuizApp from './react/view/_QuizApp';
 
 // ReactDOM.render(<ButtonList />, document.getElementById('js-buttons'));
 // ReactDOM.render(<FontImg />, document.getElementById('js-img'));
-ReactDOM.render(<Quiz />, document.getElementById('js-quiz'));
+ReactDOM.render(<QuizApp />, document.getElementById('js-quiz'));

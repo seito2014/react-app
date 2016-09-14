@@ -1,31 +1,32 @@
 import React from 'react';
-import data from '../constants/_Data.js';
-import answerList from '../store/_AnswerTable.js';
+import Data from '../constants/_Data.js';
 import Action from '../action/_Action.js';
 
 class Button extends React.Component {
     constructor(props) {
         super(props);
-        this.index = props.index;
-        this._countUp = props.countUp;
-        // console.log(this._countUp);
+        // this.index = props.index;
+        // this._countUp = props.countUp;
+        this.state = {
+            index: this.props.index
+        };
     }
-
+    
     handleClick(){
-        // console.log(this);
         this.storeAnswer();
-        // this.countUp();
-        // console.log(this.state);
-        this._countUp();
+        this.setState({
+            index: this.state.index + 1
+        });
+        console.log(this.state.index);
     }
 
     storeAnswer(){
         let userAnswer = this.props.text;
 
-        if(userAnswer === data[0].ANSWER){
-            answerList[0] = true;
+        if(userAnswer === Data.viewData[0].ANSWER){
+            Data.answerTable[0] = true;
         } else {
-            answerList[0] = false;
+            Data.answerTable[0] = false;
         }
     }
 

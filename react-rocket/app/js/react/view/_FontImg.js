@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../constants/_data.js';
+import Data from '../constants/_Data';
 
 class FontImg extends React.Component {
     constructor(props) {
@@ -8,7 +8,7 @@ class FontImg extends React.Component {
 
     render() {
         return (
-            <img src={data[0].QUESTION} width="320" height="60" alt=""/>
+            <img src={Data.viewData[0].QUESTION} width="320" height="60" alt=""/>
         );
     }
 }

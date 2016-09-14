@@ -1,28 +1,12 @@
 import Dispatcher from '../dispatcher/_Dispatcher';
-import Index from '../store/_Index';
-// let Dispatcher = require('flux').Dispatcher;
-
-console.log(Dispatcher.dispatch);
-
-//
-// Dispatcher.handleAction
-// let Actions = {
-//
-//     countUp: function() {
-//         console.log(Index);
-//         Dispatcher.handleAction = function(){
-//             Index.index++;
-//         };
-//     }
-// };
-// let index = Index.index;
+import Data from '../constants/_Data';
 
 module.exports = {
 
-    // countUp: function () {
-        // Dispatcher.dispatch({
-        //     actionType: 'progress'
-        // });
-
-    // }
+    draw: function (num) {
+        Dispatcher.dispatch({
+            actionType: 'progress',
+            value: Data[num]
+        });
+    }
 };

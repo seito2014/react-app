@@ -1,18 +1,18 @@
 import Dispatcher from '../dispatcher/_Dispatcher';
+import Data from '../constants/_Data.js';
 
 module.exports = {
 
-    //今何問目か
     // index: 0,
     // getIndex: function(){
-    //     return index;
+    //     return this.index;
     // },
-    // IndexStore: function() {
+    // IndexStore: function(){
     //     Dispatcher.register(function(payload) {
     //         if(payload.actionType === 'progress') {
-    //             index+=1;
+    //             this.index+=1;
     //         }
-    //         console.log(index);
+    //         console.log(this.index);
     //     });
     // }
 };
