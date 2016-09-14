@@ -1,17 +1,21 @@
-'use strict';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import Button from './components/Button'
+import counter from './reducers'
 
-import React from 'react';
-import { render } from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import App from './components/App';
-import reducer from './reducers';
+const store = createStore(counter);
 
-const store = createStore(reducer);
+const rootEl = document.getElementById('js-quiz');
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('js-quiz')
+const render = () => ReactDOM.render(
+  <Button
+    value={store.getState()}
+    onProgress={() => store.dispatch({ type: 'INCREMENT' })}
+  />,
+  rootEl
 );
+
+render();
+
+store.subscribe(render);

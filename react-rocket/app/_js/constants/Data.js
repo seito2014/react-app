@@ -1,4 +1,5 @@
 module.exports = {
+    index: 0,
     answerTable: [],
     viewData: [
         {

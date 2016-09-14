@@ -1,14 +1,26 @@
-import React, { PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
+import Data from '../constants/Data';
 
-const Button = ({ onClick, text }) => (
+class Button extends Component {
 
-    <button className="button" onClick={onClick}>
-        {text}
-    </button>
-);
+    render() {
+
+        const {value, onProgress} = this.props;
+
+        return (
+            <div>
+                {value}
+                <button className="button" onClick={onProgress}>
+                    {Data.viewData[value].SELECT}
+                </button>
+            </div>
+        )
+    }
+}
 
 Button.propTypes = {
-    index: PropTypes.number.isRequired
+    value: PropTypes.number.isRequired,
+    onProgress: PropTypes.func.isRequired
 };
 
 export default Button;

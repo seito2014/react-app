@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes } from 'react'
 import Data from '../constants/Data';
-import Button from './Button';
+import Button from './Button'
 
 const ButtonList = ({ buttonLength, index, onButtonClick }) => {
 
@@ -33,10 +33,4 @@ const ButtonList = ({ buttonLength, index, onButtonClick }) => {
     );
 };
 
-ButtonList.propTypes = {
-    buttonLength: PropTypes.number.isRequired,
-    index: PropTypes.number.isRequired,
-    onButtonClick: PropTypes.func.isRequired
-};
-
-export default ButtonList
+export default ButtonList;
