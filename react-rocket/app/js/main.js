@@ -11,7 +11,7 @@ const rootEl = document.getElementById('js-quiz');
 const render = () => ReactDOM.render(
   <Button
     value={store.getState()}
-    onButtonClick={() => store.dispatch({ type: 'INCREMENT' })}
+    onClick={() => store.dispatch({ type: 'INCREMENT' })}
   />,
   rootEl
 );

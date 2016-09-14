@@ -5,12 +5,12 @@ class Button extends Component {
 
     render() {
 
-        const {value, onButtonClick} = this.props;
+        const {value, onClick} = this.props;
 
         return (
             <div>
                 {value}
-                <button className="button" onClick={onButtonClick}>
+                <button className="button" onClick={onClick}>
                     {Data.viewData[value].SELECT}
                 </button>
             </div>
@@ -20,7 +20,7 @@ class Button extends Component {
 
 Button.propTypes = {
     value: PropTypes.number.isRequired,
-    onButtonClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired
 };
 
 export default Button;
