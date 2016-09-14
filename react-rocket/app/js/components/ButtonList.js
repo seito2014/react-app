@@ -52,6 +52,7 @@
 
 import React, {Component, PropTypes} from 'react';
 import Data from '../constants/Data';
+import Button from './Button';
 
 class ButtonList extends Component {
 
@@ -65,9 +66,10 @@ class ButtonList extends Component {
             for (let i = 0; i < Data.viewData.length + 1; i++) {
                 array.push(
                     <li className="l-grid-item js-button">
-                        <button className="button" onClick={onButtonClick}>
-                            {Data.viewData[counter].SELECT[i]} | {counter}
-                        </button>
+                        <Button
+                            text={Data.viewData[counter].SELECT[i]}
+                            onClick={onButtonClick}
+                        />
                     </li>
                 );
             }
