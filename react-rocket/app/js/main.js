@@ -6,14 +6,14 @@ import reducer from './reducers'
 
 const store = createStore(reducer);
 
-const rootEl = document.getElementById('js-quiz');
+const rootElm = document.getElementById('js-quiz');
 
 const render = () => ReactDOM.render(
     <App
         rootValue={store.getState()}
         onButtonListClick={() => store.dispatch({ type: 'INCREMENT' })}
     />,
-    rootEl
+    rootElm
 );
 
 render();
