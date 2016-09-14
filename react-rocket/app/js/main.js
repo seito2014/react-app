@@ -4,8 +4,20 @@ import { createStore } from 'redux';
 import App from './components/App';
 import reducer from './reducers';
 import { answer } from './actions/action';
+import Data from './constants/Data';
 
 const store = createStore(reducer);
+
+let judge = (val1, val2, text, callback)=> {
+    window.alert(text);
+    if(val1 === val2 - 1){
+        callback();
+    }
+};
+
+let moveComp = () => {
+    window.location.href = 'comp.html';
+};
 
 const rootElm = document.getElementById('js-quiz');
 
@@ -15,9 +27,22 @@ const render = () => ReactDOM.render(
         rootValue={store.getState().reducerIncrement}
         onButtonListClick={(e) => {
             store.dispatch({ type: 'INCREMENT' });
-            store.dispatch(answer(e.target.innerHTML));
-            //console.log(e.target.innerHTML);
-            console.log(store.getState().reducerAnswer);
+
+            let count = store.getState().reducerIncrement - 1;
+
+            let userAnswer = answer(e.target.innerHTML).answer;
+            let correctAnswer = Data.viewData[count].ANSWER;
+            let sheet = (userAnswer === correctAnswer) ? "正解！" : "はずれ！";
+
+            store.dispatch(answer(sheet));
+
+            judge(
+                count,
+                Data.viewData.length,
+                store.getState().reducerAnswer[count].answer,
+                moveComp
+            );
+
         }}
     /></div>,
     rootElm
