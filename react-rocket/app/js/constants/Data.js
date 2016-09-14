@@ -2,15 +2,15 @@ module.exports = {
     answerTable: [],
     viewData: [
         {
-            QUESTION: "calibri.png",
+            QUESTION: "images/img-calibri.png",
             SELECT: ["Helvetica", "Calibri", "Yu Gothic", "Arial"],
             ANSWER: "Calibri"
         }, {
-            QUESTION: "helvetica.png",
+            QUESTION: "images/img-helvetica.png",
             SELECT: ["Montserrat", "Helvetica", "Roboto", "Noto fonts"],
             ANSWER: "Helvetica"
         }, {
-            QUESTION: "times-new-roman.png",
+            QUESTION: "images/img-times-new-roman.png",
             SELECT: ["Times new roman", "Meiryo", "Lato", "Raleway"],
             ANSWER: "Times new roman"
         }

@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import ButtonList from './ButtonList'
+import Question from './Question';
+import ButtonList from './ButtonList';
 
 class App extends Component {
 
@@ -9,6 +10,9 @@ class App extends Component {
 
         return (
             <div>
+                <Question
+                    value={rootValue}
+                />
                 <ButtonList
                     value={rootValue}
                     onButtonClick={onButtonListClick}
