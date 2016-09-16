@@ -32,14 +32,12 @@ const render = () => ReactDOM.render(
 
             let userAnswer = answer(e.target.innerHTML).answer;
             let correctAnswer = Data.viewData[count].ANSWER;
-            let sheet = (userAnswer === correctAnswer) ? "True! :)" : "False! :(";
-
-            store.dispatch(answer(sheet));
+            let result = (userAnswer === correctAnswer) ? "True! :)" : "False! :(";
 
             judge(
                 count,
                 Data.viewData.length,
-                store.getState().reducerAnswer[count].answer,
+                result,
                 moveComp
             );
 
