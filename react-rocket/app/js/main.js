@@ -32,7 +32,7 @@ const render = () => ReactDOM.render(
 
             let userAnswer = answer(e.target.innerHTML).answer;
             let correctAnswer = Data.viewData[count].ANSWER;
-            let sheet = (userAnswer === correctAnswer) ? "正解！" : "はずれ！";
+            let sheet = (userAnswer === correctAnswer) ? "True! :)" : "False! :(";
 
             store.dispatch(answer(sheet));
 

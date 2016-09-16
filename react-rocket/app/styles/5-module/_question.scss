@@ -1,11 +1,17 @@
 .question {
     text-align: center;
+    margin-bottom: 50px;
     > dt {
-        font-weight: bold;
-        margin-bottom: 20px;
+        font-size: 30px;
+        margin-bottom: 30px;
+        span {
+            font-weight: bold;
+        }
     }
     > dd {
         display: inline-block;
+        background-color: #eee;
+        padding: 30px;
         border: 1px solid #ccc;
     }
 }
