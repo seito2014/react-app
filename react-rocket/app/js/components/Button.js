@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import styled from '../../../node_modules/styled-components';
 
 class Button extends Component {
 
@@ -7,9 +8,9 @@ class Button extends Component {
         const {text, onClick} = this.props;
 
         return (
-            <button className="button" onClick={onClick}>
+            <Button className="button" onClick={onClick}>
                 {text}
-            </button>
+            </Button>
         )
     }
 }
@@ -19,4 +20,16 @@ Button.propTypes = {
     onClick: PropTypes.func.isRequired
 };
 
-export default Button;
+const COLOR_MAIN = '#ffbb4d';
+
+export default Button = styled.button`
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: ${COLOR_MAIN};
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+`;
