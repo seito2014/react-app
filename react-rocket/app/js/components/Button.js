@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
-import styled from '../../../node_modules/styled-components';
+import styled from 'styled-components';
+
+import constants from '../constants/Style.js';
 
 class Button extends Component {
 
@@ -20,16 +22,15 @@ Button.propTypes = {
     onClick: PropTypes.func.isRequired
 };
 
-const COLOR_MAIN = '#ffbb4d';
-
-export default Button = styled.button`
-    display: block;
-    width: 100%;
-    color: #fff;
-    background-color: ${COLOR_MAIN};
-    border-radius: 5px;
-    padding: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1;
-`;
+export default Button;
+// = styled.button`
+//     display: block;
+//     width: 100%;
+//     color: #fff;
+//     background-color: ${constants.COLOR_FB};
+//     border-radius: 5px;
+//     padding: 15px;
+//     font-size: 20px;
+//     font-weight: bold;
+//     line-height: 1;
+// `;
